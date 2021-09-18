@@ -1,5 +1,7 @@
 # Take-home Assignment
 
+![image](https://user-images.githubusercontent.com/686715/133868047-ae86e0fb-7a03-4b42-9e14-6645f37fcbc1.png)
+
 ## Fullstack Senior Software Engineer
 
 Thank you for your interest in applying to Oxygen!
