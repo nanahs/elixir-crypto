@@ -27,7 +27,11 @@ mix phx.server
 Crypto is a Phoenix Liveview application that keeps track of crypto
 prices in real-time. All features should be built using Liveview only.
 
-Please use the Coinbase REST API to get the prices of crypto.
+Please use the Coinbase REST API to get the prices of crypto. Use USD as the 
+currency pair with the cryptocurrency. We already have schemas for `User` and `Currency`. 
+Create any new schemas that you feel are necessary.
+
+Account registration and login is already implemented.
 
 ### Task 1
 
