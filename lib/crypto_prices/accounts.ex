@@ -347,4 +347,10 @@ defmodule Crypto.Accounts do
       {:error, :user, changeset, _} -> {:error, changeset}
     end
   end
+
+  def with_user_currencies(query, user_id) do
+    from uc in Crypto.LikedCurrencies.UserCurrency,
+      where: uc.user_id == ^user_id,
+      select: %{curreny_id: uc.currency_id}
+  end
 end

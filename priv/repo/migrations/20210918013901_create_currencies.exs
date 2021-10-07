@@ -7,6 +7,7 @@ defmodule Crypto.Repo.Migrations.CreateCurrencies do
       add :name, :text
       add :current_price, :decimal
       add :priced_at, :naive_datetime
+      add :likes_count, :integer, default: 0
 
       timestamps()
     end

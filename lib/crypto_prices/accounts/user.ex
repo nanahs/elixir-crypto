@@ -1,6 +1,9 @@
 defmodule Crypto.Accounts.User do
   use Ecto.Schema
   import Ecto.Changeset
+
+  alias Crypto.Currencies.Currency
+
   @primary_key {:id, :binary_id, autogenerate: true}
   @foreign_key_type :binary_id
   schema "users" do
@@ -9,7 +12,15 @@ defmodule Crypto.Accounts.User do
     field :hashed_password, :string, redact: true
     field :confirmed_at, :naive_datetime
 
+    many_to_many :currencies, Currency, join_through: "user_currencies"
+
     timestamps()
+  end
+
+  def changeset_update_currencies(user, currencies) do
+    user
+    |> cast(%{}, [])
+    |> put_assoc(:currencies, currencies)
   end
 
   @doc """
